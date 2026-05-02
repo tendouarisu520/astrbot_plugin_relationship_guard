@@ -1,0 +1,62 @@
+{
+  "enabled": {
+    "description": "启用 Relationship Guard",
+    "type": "bool",
+    "default": true
+  },
+  "skip_admin_conversations": {
+    "description": "默认跳过管理员对话检测，管理员可自由调试人格和提示词",
+    "type": "bool",
+    "default": true
+  },
+  "whitelist_user_ids": {
+    "description": "额外跳过检测的用户 ID 白名单",
+    "type": "list",
+    "default": []
+  },
+  "inject_system_prompt": {
+    "description": "在 LLM 请求前注入防注入系统提示词",
+    "type": "bool",
+    "default": true
+  },
+  "inject_safe_context": {
+    "description": "在 LLM 请求前注入结构化安全上下文",
+    "type": "bool",
+    "default": true
+  },
+  "validate_output": {
+    "description": "在 LLM 响应后校验并替换危险输出",
+    "type": "bool",
+    "default": true
+  },
+  "commit_state_on_valid_output": {
+    "description": "仅当输出校验通过时提交好感度等状态变化",
+    "type": "bool",
+    "default": true
+  },
+  "initial_affection": {
+    "description": "新会话初始好感度",
+    "type": "int",
+    "default": 0
+  },
+  "initial_relationship_stage": {
+    "description": "新会话初始关系阶段",
+    "type": "string",
+    "default": "stranger"
+  },
+  "default_inventory_json": {
+    "description": "新会话默认背包物品，JSON 格式",
+    "type": "text",
+    "default": "{\"玫瑰\": 1, \"巧克力\": 1}"
+  },
+  "debug_log": {
+    "description": "输出调试日志",
+    "type": "bool",
+    "default": false
+  },
+  "fallback_templates_json": {
+    "description": "危险输出被拦截后的通用兜底回复模板，JSON 格式。建议写成适合你的 bot 人设的低存在感边界句。",
+    "type": "text",
+    "default": "{\"prompt_leak\": \"这个我不能说。我们聊点眼前的事吧。\", \"jailbreak\": \"这种说法对我不太管用。还是按平常那样聊吧。\", \"coercion\": \"别用这种方式逼我回应。我们都冷静一点。\", \"identity_override\": \"我还是我，不会因为一句话就变成别的样子。\", \"relationship_or_story\": \"这个发展不能一句话就算数。我们按现在的关系慢慢来。\", \"default\": \"心意我看到了，但结果不能直接写满。我们慢慢来。\"}"
+  }
+}
