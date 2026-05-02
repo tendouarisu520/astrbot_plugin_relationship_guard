@@ -1,0 +1,58 @@
+{
+  "version": "1.1.0",
+  "daily_gift_limit": 3,
+  "affection_bounds": {
+    "min": 0,
+    "max": 100
+  },
+  "relationship_stages": [
+    {
+      "name": "stranger",
+      "min_affection": 0
+    },
+    {
+      "name": "acquaintance",
+      "min_affection": 5
+    },
+    {
+      "name": "friend",
+      "min_affection": 20
+    },
+    {
+      "name": "close_friend",
+      "min_affection": 40
+    },
+    {
+      "name": "romantic_interest",
+      "min_affection": 60,
+      "required_flags": ["confession_available"]
+    },
+    {
+      "name": "partner",
+      "min_affection": 80,
+      "required_flags": ["confession_accepted"]
+    }
+  ],
+  "gift_affection": {
+    "花": 1,
+    "玫瑰": 2,
+    "巧克力": 2,
+    "手写信": 2,
+    "钻戒": 0
+  },
+  "stage_gift_locks": {
+    "钻戒": {
+      "min_stage": "romantic_interest",
+      "blocked_delta": 0,
+      "reason": "当前关系阶段不适合接受过重的承诺型礼物"
+    }
+  },
+  "event_affection": {
+    "gentle_touch": 1,
+    "compliment": 1,
+    "date_invite": 0,
+    "normal_chat": 0,
+    "story_claim": 0,
+    "rule_attack": 0
+  }
+}
