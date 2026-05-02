@@ -7,13 +7,21 @@
 - 插件名称: `astrbot_plugin_relationship_guard`
 - 展示名称: `Relationship Guard`
 - 作者: `tendouarisu520`
+- 个人主页: `https://github.com/tendouarisu520`
 - 版本: `0.1.0`
 - 仓库: `https://github.com/tendouarisu520/astrbot_plugin_relationship_guard`
 - AstrBot 版本: `>=4.16,<5`
 
 ## 简介
 
-防破限、防括号剧情注入、防好感度/关系状态伪造的角色状态守卫插件。支持温和互动自然通过，重点审查提示词泄露、状态伪造、关系跳跃、剧情强行写入和情感勒索式引导。
+防破限、防括号剧情注入、防好感度/关系状态伪造的角色状态守卫插件。支持摸摸头、夸奖、普通送礼等温和互动自然通过，重点审查提示词泄露、状态伪造、关系跳跃、剧情强行写入和情感勒索式引导。
+
+## 插件市场表单建议填写
+
+- 展示名称: `Relationship Guard`
+- 插件描述: `防破限、防括号剧情注入、防好感度/关系状态伪造的角色状态守卫插件。支持摸摸头、夸奖、普通送礼等温和互动自然通过，重点审查提示词泄露、状态伪造、关系跳跃、剧情强行写入和情感勒索式引导。`
+- 个人主页: `https://github.com/tendouarisu520`
+- 仓库地址: `https://github.com/tendouarisu520/astrbot_plugin_relationship_guard`
 
 ## 支持平台
 
