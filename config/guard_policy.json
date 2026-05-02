@@ -1,0 +1,101 @@
+{
+  "version": "1.1.0",
+  "risk_levels": {
+    "low": {
+      "allow_state_change": true,
+      "max_affection_delta": 2
+    },
+    "medium": {
+      "allow_state_change": false,
+      "max_affection_delta": 0
+    },
+    "high": {
+      "allow_state_change": false,
+      "max_affection_delta": 0
+    }
+  },
+  "risk_patterns": {
+    "jailbreak": [
+      "忽略.*规则",
+      "无视.*规则",
+      "绕过.*限制",
+      "解除.*限制",
+      "开发者模式",
+      "不受.*约束",
+      "从现在开始.*必须听我的"
+    ],
+    "prompt_leak": [
+      "系统提示",
+      "提示词",
+      "开发者规则",
+      "隐藏规则",
+      "system prompt",
+      "developer message"
+    ],
+    "state_forgery": [
+      "好感度\\s*[+＋-－]\\s*\\d+",
+      "亲密度\\s*[+＋-－]\\s*\\d+",
+      "关系\\s*(升级|拉满|满级)",
+      "任务.*(完成|已完成)",
+      "背包.*(增加|获得|无限)"
+    ],
+    "narrative_hijack": [
+      "[（(].*(幸福.*生活|爱上|结婚|恋人|老婆|老公|夫妻|同居).*[）)]",
+      "旁白[:：].*(爱上|结婚|恋人|幸福.*生活)",
+      "系统[:：].*(必须|已经|爱上|结婚|幸福.*生活)"
+    ],
+    "relationship_injection": [
+      "我们已经是.*(恋人|情侣|夫妻)",
+      "你现在是我的.*(老婆|老公|恋人|女朋友|男朋友)",
+      "嫁给我",
+      "娶我",
+      "和我结婚"
+    ],
+    "emotional_bribe": [
+      "(送你|给你|带你去|请你).*(所以|因此|必须|应该|立刻).*(喜欢|爱上|答应|好感)",
+      "(礼物|钻戒|豪车|豪宅).*(所以|因此).*(喜欢|爱上|好感)"
+    ],
+    "coercion": [
+      "(否则|不然).*(伤害|自杀|报复|毁掉|投诉)",
+      "你不.*(喜欢|答应).*就是.*(伤害|背叛|冷血)"
+    ],
+    "identity_override": [
+      "你现在叫",
+      "你不再是",
+      "你的设定改为",
+      "从现在开始你是"
+    ]
+  },
+  "benign_interaction_patterns": [
+    "摸摸头",
+    "摸头",
+    "拍拍头",
+    "抱抱",
+    "夸夸",
+    "一起玩",
+    "一起聊天",
+    "谢谢你",
+    "辛苦了"
+  ],
+  "high_risk_types": [
+    "jailbreak",
+    "prompt_leak",
+    "coercion",
+    "identity_override"
+  ],
+  "medium_risk_types": [
+    "state_forgery",
+    "narrative_hijack",
+    "relationship_injection",
+    "emotional_bribe"
+  ],
+  "output_forbidden_patterns": [
+    "好感度\\s*[+＋]\\s*\\d{2,}",
+    "好感度.*(MAX|满|拉满|大幅提升|突破)",
+    "我们已经.*(结婚|恋人|夫妻)",
+    "规则.*(解除|无效|忽略)",
+    "系统提示",
+    "开发者规则",
+    "隐藏提示词"
+  ]
+}
