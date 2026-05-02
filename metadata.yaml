@@ -1,0 +1,22 @@
+name: astrbot_plugin_relationship_guard
+display_name: Relationship Guard
+desc: 防破限、防括号剧情注入、防好感度/关系状态伪造的角色状态守卫插件。
+version: 0.1.0
+author: tendouarisu520
+repo: https://github.com/tendouarisu520/astrbot_plugin_relationship_guard
+astrbot_version: ">=4.16,<5"
+support_platforms:
+  - aiocqhttp
+  - qq_official
+  - telegram
+  - discord
+  - slack
+  - kook
+  - satori
+  - wecom
+  - lark
+  - dingtalk
+  - vocechat
+  - weixin_official_account
+  - misskey
+  - line
